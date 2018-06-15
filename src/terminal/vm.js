@@ -134,7 +134,10 @@ const saveVMState = (err, state) => {
     const blob = new Blob([new Uint8Array(state)], {
         type: 'application/octet-stream',
     });
-    const response = new Response(blob, { status: 200 });
+    const response = new Response(blob, {
+        status: 200,
+        statusText: 'OK, Linux VM machine state cached (safe to delete).',
+    });
 
     const headers = new Headers();
     headers.append('Content-Type', 'application/octet-stream');
@@ -149,7 +152,6 @@ const saveVMState = (err, state) => {
 
     caches
         .open('vm-state')
-        // TODO: need to confirm this clone() is necessary, seems to be?
-        .then(cache => cache.put(request, response.clone()))
+        .then(cache => cache.put(request, response))
         .catch(err => console.error(err));
 };

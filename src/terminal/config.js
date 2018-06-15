@@ -1,31 +1,6 @@
 export const stateUrl = 'bin/vm-state.bin';
 export const vmStateCache = 'vm-state';
 
-// https://github.com/zeit/hyper/blob/28f778037b98637b47dc40643597f3a41271bf46/lib/reducers/ui.js#L54
-export const hyperTheme = {
-    background: '#000',
-    black: '#000000',
-    blue: '#0A2FC4',
-    brightBlack: '#686868',
-    brightBlue: '#6A76FB',
-    brightCyan: '#68FDFE',
-    brightGreen: '#67F86F',
-    brightMagenta: '#FD7CFC',
-    brightRed: '#FD6F6B',
-    brightWhite: '#FFFFFF',
-    brightYellow: '#FFFA72',
-    cursor: '#F81CE5',
-    cursorAccent: '#000',
-    cyan: '#20C5C6',
-    foreground: '#fff',
-    green: '#1DC121',
-    magenta: '#C839C5',
-    red: '#C51E14',
-    selection: 'rgba(248,28,229,0.3)',
-    white: '#C7C7C7',
-    yellow: '#C7C329',
-};
-
 // https://github.com/sonatard/color-theme-molokai/blob/2320bc6150c5dd2be353a9a7967e8c482dc48b61/molokai.minttyrc
 export const molokaiTheme = {
     background: '#1B1D1E',

@@ -11,6 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const vm = new VM(term);
 
+    // Reduce CPU/battery use when not in focus
+    // TODO: we might want to add UI to disable this later
     term.on('focus', vm.resume);
     term.on('blur', vm.suspend);
 
